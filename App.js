@@ -5,8 +5,8 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import SafeAreaView from 'react-native-safe-area-view';
-import { Avatar,Iconz } from 'react-native-elements';
-import { createMaterialTopTabNavigator} from 'react-navigation-tabs';
+import { Avatar, Icon } from 'react-native-elements';
+import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
 import TabBar from './src/tabBar'
 import Ionicons from 'react-native-vector-icons/FontAwesome';
 
@@ -73,13 +73,13 @@ class DetailsScreen extends React.Component {
   }
 }
 
-const Saved=()=>{
-  return(
+const Saved = () => {
+  return (
     <View><Text>Hreloo</Text></View>
   )
 }
-const Time=()=>{
-  return(
+const Time = () => {
+  return (
     <View><Text>Hreloo</Text></View>
   )
 }
@@ -100,51 +100,59 @@ const RootStack = createBottomTabNavigator(
   {
     Home: HomeStack,
     Details: DetailsStack,
-    Saved:SavedStack,
-    Time:TimeStack
-  },{
-    defaultNavigationOptions: ({ navigation }) => ({
-      tabBarIcon: ({ focused, horizontal, tintColor }) => {
-        const { routeName } = navigation.state;
-        let iconName;
-        if (routeName === 'Home') {
-          iconName = `home`;
-        } else if (routeName === 'Details') {
-          iconName = `star`;
-        } else if (routeName === 'Saved') {
-          iconName = `shopping-bag`;
-        } else if (routeName === 'Time') {
-          iconName = `heart`;
-        } else if (routeName === 'Profile') {
-          iconName = `user`;
-        }
+    Saved: SavedStack,
+    Time: TimeStack
+  }, {
+  defaultNavigationOptions: ({ navigation }) => ({
+    tabBarIcon: ({ focused, horizontal, tintColor }) => {
+      const { routeName } = navigation.state;
+      let iconName;
+      if (routeName === 'Home') {
+        iconName = `home`;
+      } else if (routeName === 'Details') {
+        iconName = `star`;
+      } else if (routeName === 'Saved') {
+        iconName = `shopping-bag`;
+      } else if (routeName === 'Time') {
+        iconName = `heart`;
+      } else if (routeName === 'Profile') {
+        iconName = `user`;
+      }
 
-        return <Ionicons name={iconName} size={horizontal ? 20 : 25} color={tintColor} />;
-      },
-    }),
-    tabBarComponent: (props) => <TabBar {...props}/>,
-    tabBarOptions: {
-        tabFeatured: 'Bag',
-        backgroundFeaturedIcon: '#D7465A',
-        activeFeaturedTintColor: 'skyblue',
-        inactiveFeatureTintColor: 'white',
-        showLabel: true,
-        activeTintColor: '#D7465A',
-        inactiveTintColor: '#E1E3DB',
-        style: {
-            height: 80,
-            backgroundColor: '#FFFFFF',
-            borderTopWidth: 1,
-            borderTopColor: '#F2F3EF'
-        },
-        tabStyle: {}
-    }
+      return (
+        <View>
+          <Ionicons name={iconName} size={horizontal ? 20 : 25} color={tintColor} />
+          <Icon type="entypo" name="dot-single" size={horizontal ? 20 : 25} color={tintColor} />
+        </View>
+
+
+
+      );
+    },
+  }),
+  tabBarComponent: (props) => <TabBar {...props} />,
+  tabBarOptions: {
+    tabFeatured: 'Bag',
+    backgroundFeaturedIcon: '#D7465A',
+    activeFeaturedTintColor: 'skyblue',
+    inactiveFeatureTintColor: 'white',
+    showLabel: true,
+    activeTintColor: '#D7465A',
+    inactiveTintColor: '#E1E3DB',
+    style: {
+      height: 200,
+      backgroundColor: '#FFFFFF',
+      borderTopWidth: 1,
+      borderTopColor: '#F2F3EF'
+    },
+    tabStyle: {}
+  }
 });
 
 const AppContainer = createAppContainer(RootStack);
 
 export default class App extends React.Component {
   render() {
-    return (<SafeAreaView style={{flex:1}}><AppContainer /></SafeAreaView>);
+    return (<SafeAreaView style={{ flex: 1 }}><AppContainer /></SafeAreaView>);
   }
 }
