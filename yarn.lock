@@ -3063,9 +3063,9 @@ hoist-non-react-statics@^3.0.1, hoist-non-react-statics@^3.1.0, hoist-non-react-
     react-is "^16.7.0"
 
 hosted-git-info@^2.1.4:
-  version "2.8.5"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.5.tgz#759cfcf2c4d156ade59b0b2dfabddc42a6b9c70c"
-  integrity sha512-kssjab8CvdXfcXMXVcvsXum4Hwdq9XGtRD3TteMEvEbq0LXyiNQr6AprqKqfeaDXze7SxWvRxdpwE6ku7ikLkg==
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
+  integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
 html-encoding-sniffer@^1.0.2:
   version "1.0.2"
@@ -5390,6 +5390,13 @@ react-native-pages@^0.9.0:
   integrity sha512-ea1VNr3KMO4BS2Rpu8T710QbIq16g1sM+ET9IGt559AIHFhqCKB7TeKwyagCA8v5swSpQLWNpTJxp/JB+4mDFQ==
   dependencies:
     prop-types "^15.5.9"
+
+react-native-paper-onboarding@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-paper-onboarding/-/react-native-paper-onboarding-1.0.2.tgz#f8708d0d7a6f927ac01c37a594a8b1e3b3651f39"
+  integrity sha512-lvm+SgKE6hOSDvZp2g3viz3ex26ww4mIf0prnRM87o2qRF0QllwgCWhOpYKN7hJJ+432KYnkMtQ2jUHgYf2K6Q==
+  dependencies:
+    prop-types "^15.6.2"
 
 react-native-paper@^3.2.1:
   version "3.2.1"
